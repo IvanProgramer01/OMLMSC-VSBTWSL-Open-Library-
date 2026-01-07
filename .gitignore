@@ -1,41 +1,84 @@
-# Prerequisites
-*.d
+# ===================================================================
+# 🌐 OMLMSC-VSBTWSL — Final Universal .gitignore
+# Covers: C/C++, Rust, C#, Python, Go, Ruby, RedStone.Script, Zig, Julia, Nim, Swift,
+#         WSL2, CI, IDEs, Docker, and — media assets (logos, screenshots, docs)
+# ===================================================================
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+# ---------- Общие временные файлы ----------
+*~
+.*.swp
+.DS_Store
+desktop.ini
+Thumbs.db
+.cache/
+.temp/
 
-# Precompiled Headers
-*.gch
-*.pch
+# ---------- Системные и логи ----------
+*.log
+*.tmp
+*.bak
+*.old
+crash.dmp
+debug.log
 
-# Linker files
-*.ilk
+# ---------- Сборочные артефакты ----------
+/build/
+/out/
+/dist/
+/bin/
+/lib/
+/obj/
+/tmp/
+/staging/
 
-# Debugger Files
-*.pdb
+# ---------- C / C++ / MSVC ----------
+*.o *.obj *.a *.lib *.dll *.so *.dylib *.exe *.pdb *.ilk *.exp *.manifest *.map *.res
+.vs/ *.sln *.suo *.vcxproj* ipch/ Debug/ Release/ x64/ x86/ ARM64/ ARM64EC/
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+# ---------- CMake & Ninja ----------
+CMakeCache.txt CMakeFiles/ cmake_install.cmake *.ninja .ninja_log
 
-# Fortran module files
-*.mod
-*.smod
+# ---------- Rust ----------
+/target/ **/*.rs.bk
+# Cargo.lock — оставлен (коммитим для библиотек)
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
+# ---------- C# / .NET ----------
+/bin/ /obj/ *.csproj.user *.sln.ide *.user publish/ appsettings.Development.json
 
-# Executables
-*.exe
-*.out
-*.app
+# ---------- Python ----------
+__pycache__/ *.pyc *.pyo *.pyd .venv/ venv/ env/ .env* .pytest_cache/ .mypy_cache/ .pyre/
 
-# debug information files
-*.dwo
+# ---------- Go ----------
+/go/bin/ go.sum   # go.sum — оставлен (рекомендуется коммитить)
+
+# ---------- Ruby / Julia / Zig / Nim / Swift ----------
+.bundle/ vendor/bundle/ .ruby-version .julia/ zig-cache/ nimcache/ DerivedData/ *.xcodeproj/
+
+# ---------- RedStone.Script 🌟 ----------
+*.rsx *.rsc *.rslib *.rsobj /redstone_cache/ /redstone_build/
+
+# ---------- Pixselltion OS ----------
+*.vomf   # ← НЕ игнорится — это часть конфигурации/описания модулей
+
+# ---------- IDE & Editors ----------
+.vscode/           # кроме явно нужных: !.vscode/settings.json и т.д.
+.idea/ *.iml *.ipr *.iws
+*.sublime-* \#*\# tags TAGS
+
+# ---------- CI / DevOps ----------
+.github/workflows/*.tmp .gitlab-ci.yml azure-pipelines.yml
+
+# ---------- Docker ----------
+.dockerignore Dockerfile.tmp /docker/build/
+
+# ---------- Секреты (защита) ----------
+*.pem *.key *.cert *.crt id_rsa secrets.json credentials.json
+
+# ---------- Графика: ВРЕМЕННЫЕ/АВТОГЕНЕРИРУЕМЫЕ файлы ----------
+# ← ВАЖНО: статичные логотипы (logo.jpg, microsoft.jpg и т.п.) НЕ игнорятся — они в репо!
+*.tmp.jpg
+*.rendered.png
+/temp-*.png
+/screenshots/tmp_*
+/docs/_build/
+/docs/generated/

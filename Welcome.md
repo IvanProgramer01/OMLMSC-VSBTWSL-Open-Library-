@@ -5,16 +5,12 @@
 
 <div align="center">
 
-  <img src="docs/logo-omlmsc.jpg" alt="OMLMSC-VSBTWSL Logo" width="320" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin: 16px 0;">
-
   <h1>OMLMSC-VSBTWSL</h1>
   <h3>Open Multi-Library Microsoft SDK Clusters — Visual Studio BuildTools Windows System Library</h3>
 
   <p>
     <em>A universal, GPL-licensed platform for safe, open, cross-language systems programming on Windows.</em>
   </p>
-
-  <img src="docs/microsoft-logo.jpg" alt="Microsoft Logo — Used under Fair Use for SDK Reference" width="180" style="opacity: 0.85; margin-top: 24px;">
   
   <p><small>
     Microsoft logo used for illustrative/reference purposes only.<br>
